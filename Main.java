@@ -31,7 +31,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        //птички напели, что ключ шифрования — индекс первого бита текущего таймстемпа
+        //птички напели, что ключ шифрования — индекс старшего бита текущего таймстемпа
         var time = System.currentTimeMillis();
         var secret = findFirstBitIndex(time);
         var deciphered = new Cipher(CIPHERED_MESSAGE).uncipher(secret);
